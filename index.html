@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Practice</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section class="section-one">
+        <h2 class="layer banner" id="banner">ADVENTURE</h2>
+        <img src="img/sky.png" class="layer sky" id="sky" data-speed="5">
+        <img src="img/mountain3.png" class="layer mountain3" id="mountain3" data-speed="5">
+        <img src="img/mountain2.png" class="layer mountain2" id="mountain2" data-speed="5">
+        <img src="img/mountain1.png" class="layer mountain1" id="mountain1" data-speed="5">
+        <img src="img/person.png" class="layer person" id="person" data-speed="5">
+    </section>
+    <section class="section-two">
+        <div class="text-left" id="text-left">
+            <h2>Title Parallax</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur velit hic fuga quia reiciendis molestias ea sed officiis suscipit voluptatibus, laboriosam facilis doloremque consequuntur dolorem voluptate dolores, nesciunt ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore aut soluta tempora laboriosam, qui modi similique, corporis sed iure facilis nostrum officiis vitae iste porro consequatur ut, magnam provident!Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur velit hic fuga quia reiciendis molestias ea sed officiis suscipit voluptatibus, laboriosam facilis doloremque consequuntur dolorem voluptate dolores, nesciunt ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore aut soluta tempora laboriosam, qui modi similique, corporis sed iure facilis nostrum officiis vitae iste porro consequatur ut, magnam provident!Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur velit hic fuga quia reiciendis molestias ea sed officiis suscipit voluptatibus, laboriosam facilis doloremque consequuntur dolorem voluptate dolores, nesciunt ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore aut soluta tempora laboriosam, qui modi similique, corporis sed iure facilis nostrum officiis vitae iste porro consequatur ut, magnam provident!Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur velit hic fuga quia reiciendis molestias ea sed officiis suscipit voluptatibus, laboriosam facilis doloremque consequuntur dolorem voluptate dolores, nesciunt ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore aut soluta tempora laboriosam, qui modi similique, corporis sed iure facilis nostrum officiis vitae iste porro consequatur ut, magnam provident!Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur velit hic fuga quia reiciendis molestias ea sed officiis suscipit voluptatibus, laboriosam facilis doloremque consequuntur dolorem voluptate dolores, nesciunt ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore aut soluta tempora laboriosam, qui modi similique, corporis sed iure facilis nostrum officiis vitae iste porro consequatur ut, magnam provident!Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur velit hic fuga quia reiciendis molestias ea sed officiis suscipit voluptatibus, laboriosam facilis doloremque consequuntur dolorem voluptate dolores, nesciunt ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore aut soluta tempora laboriosam, qui modi similique, corporis sed iure facilis nostrum officiis vitae iste porro consequatur ut, magnam provident!Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur velit hic fuga quia reiciendis molestias ea sed officiis suscipit voluptatibus, laboriosam facilis doloremque consequuntur dolorem voluptate dolores, nesciunt ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Est inventore aut soluta tempora laboriosam, qui modi similique, corporis sed iure facilis nostrum officiis vitae iste porro consequatur ut, magnam provident!</p>
+        </div>
+    </section>
+    <script>
+        let banner = document.querySelector("#banner");
+        let person = document.querySelector("#person");
+        let mountain1 = document.querySelector("#mountain1");
+        window.addEventListener('scroll',parallax);
+        function parallax(){
+            let value = window.scrollY;
+            banner.style.transform=`translateY(${value*.25}px)`;
+            person.style.transform=`translateY(${value*-.2}px)`;
+            mountain1.style.transform=`translateY(${value*-.1}px)`;
+            mountain2.style.transform=`translateY(${value*.2}px)`;
+            mountain3.style.transform=`translateY(${value*.1}px)`;
+            sky.style.transform=`translateX(${value*-.1}px)`;
+            //person.style.top=value*-0.5+'px';
+        }
+    </script>
+</body>
+</html>
